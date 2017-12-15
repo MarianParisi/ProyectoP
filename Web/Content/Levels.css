@@ -16,20 +16,17 @@
 	font-size:16px;
 	font-weight:bold;
 }
-/*.card {
+label {
 	
-	background-color: rgba(255,239,213,0.5);
-	border: none;
-	border-radius: 6px;
-	margin: 5%;
-	padding: 3%;
+	color: #ffffff;
+	padding:5px;
+	margin:0 auto;
+}
+/*.form-control{
+	width:50%;
+	
 	
 }*/
-select{
-	width:50%;
-	/*display:inline;*/
-	padding:10%;
-}
 span{
 	font-weight:bold;
 }

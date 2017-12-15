@@ -49,7 +49,7 @@ namespace Web.Controllers
 		}
 		public ActionResult Contacto()
 		{
-			ViewBag.Message = "Complete los siguientes campos";
+			ViewBag.Message = "Complete los siguientes campos y responderemos a la brevedad";
 
 			return View();
 		}
