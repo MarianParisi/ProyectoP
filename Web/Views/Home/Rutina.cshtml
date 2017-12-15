@@ -10,16 +10,14 @@
 }
 <div class="intro">
 
-  @foreach (Level level in @ViewBag.level)
-    {
-        <h1>Rutina Nivel: @level.Description</h1>
+        <h1>Rutina Nivel: @ViewBag.level.Description</h1>
 
-        <h3>Dias de entrenamiento:@level.RoutineDays</h3>
+        <h3>Dias de entrenamiento:@ViewBag.level.RoutineDays</h3>
         <hr />
-        <h3>Numero de rondas:@level.Rounds </h3>
+        <h3>Numero de rondas:@ViewBag.level.Rounds </h3>
         <hr />
-        <h3>Repeticiones:@level.ExerciseRepetition</h3>
-    }
+        <h3>Repeticiones:@ViewBag.level.ExerciseRepetition</h3>
+    
 
    
 
