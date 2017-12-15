@@ -65,3 +65,6 @@ a:active {
 th{
 	text-align:center;
 }
+.table {
+	background-color: rgba(255,239,213,0.5);
+}

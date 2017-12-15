@@ -149,6 +149,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="DAL\ExercisesController.cs" />
     <Compile Include="DAL\TrainingContext.cs" />
     <Compile Include="Global.asax.cs">
@@ -165,6 +166,10 @@
     <Compile Include="Migrations\201712150304592_tercera.cs" />
     <Compile Include="Migrations\201712150304592_tercera.Designer.cs">
       <DependentUpon>201712150304592_tercera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712151402552_cuarta.cs" />
+    <Compile Include="Migrations\201712151402552_cuarta.Designer.cs">
+      <DependentUpon>201712151402552_cuarta.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Exercise.cs" />
@@ -224,6 +229,7 @@
     <Content Include="Views\Exercises\Index.cshtml" />
     <Content Include="Views\Home\Funcional.cshtml" />
     <Content Include="Views\Home\Rutina.cshtml" />
+    <Content Include="Views\User\Registro.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -250,6 +256,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712150304592_tercera.resx">
       <DependentUpon>201712150304592_tercera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712151402552_cuarta.resx">
+      <DependentUpon>201712151402552_cuarta.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

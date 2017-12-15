@@ -10,7 +10,7 @@
 }
 <div class="intro">
 
-   @foreach (Level level in @ViewBag.level)
+  @foreach (Level level in @ViewBag.level)
     {
         <h1>Rutina Nivel: @level.Description</h1>
 
@@ -20,6 +20,8 @@
         <hr />
         <h3>Repeticiones:@level.ExerciseRepetition</h3>
     }
+
+   
 
     <table class="table">
         <thead>
