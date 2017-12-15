@@ -1,0 +1,84 @@
+﻿@using Web.Models
+
+
+
+@{
+    ViewBag.Title = "NivelInicial";
+}
+
+@section Levels
+{
+    <link rel="stylesheet" href="~/Content/Levels.css">
+
+}
+
+<!-- Rutina seleccionada -->
+<div class="intro">
+    <h1>
+        Tu rutina consiste en completar 3 rondas de 3 ejercicios funcionales los dias lunes miercoles y viernes.
+    </h1>
+    <p>
+        Podras elejir los ejercicios a continuacion, donde se indicaran las repeticiones correspondientes.
+        Al terminar las repeticiones indicadas puedes descansar 15 segundos y pasar al siguiente hasta completar todos los ejercicios de la ronda.
+        Descansaras por un minuto y comenzaras la siguiente ronda repitiendo el proceso hasta completar 3.<br />
+        <span>Importante:</span> en esta modalidad no se tiene en cuenta el tiempo que tardes en
+        realizar los ejercicios, sino que <span>el objetivo es completar las rondas</span>.
+    </p>
+    <h3>
+        Cuando vayas ganando condicion fisica podras suprimir los descansos entre ejercicios y aumentar las repeticiones.
+    </h3>
+</div>
+
+<!-- Eleccion de los ejercicios-->
+
+<div class="container" id="eleccion">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <form action="@Url.Action("Rutina","Home")" , method="post">
+                <label>Ejercicio 1</label>
+                <select class="form-control col" name="Ejercicio1">
+                    @foreach (Exercise exercise in @ViewBag.Exercises)
+                    {
+                        <option value="@exercise.ID">@exercise.Name</option>}
+                </select>
+                <label>Ejercicio 2</label>
+                <select class="form-control col" name="Ejercicio2">
+                    @foreach (Exercise exercise in @ViewBag.Exercises)
+                    {
+                        <option value="@exercise.ID">@exercise.Name</option>}
+                </select>
+                <label>Ejercicio 3</label>
+                <select class="form-control col" name="Ejercicio3">
+                    @foreach (Exercise exercise in @ViewBag.Exercises)
+                    {
+                        <option value="@exercise.ID">@exercise.Name</option>}
+                </select>
+                <button type="submit" class="btn btn-inicial">Seleccionar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+@*<div>
+        calculo de IMC/peso ideal
+        <form action="@Url.Action("CalcularIMC", "Home")" method="post">
+
+            <div>
+                <label>Ingrese su Nombre</label><input type="text" name="nombre" required />
+                <label>Ingrese su estatura en metros</label><input type="text" name="estatura" value="" /> type??
+                <label>Ingrese su peso en kilogramos</label><input type="text" name="pesoActual" value="" />
+            </div>
+            <button type="submit" class="btn btn-primary">Calcular</button>
+        </form>
+
+        Su peso IMC es @ViewBag.IMC;
+
+    </div>*@
+
+@section scripts{
+    <script>
+        $("ul").append("<li><a href='@Url.Action("NivelIntermedio", "Home")'>Siguiente Nivel</a></li>")
+    </script>
+}

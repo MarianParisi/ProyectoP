@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Contacto";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<form action="@Url.Action("IngresoUsuario","Home")" , method="post">
+    <label>Ingrese su nombre</label>
+    <input type="text" name="name" required> <br>
+
+    <label>Ingrese su correo electronico</label>
+    <input type="email" name="email" required /><br>
+
+    <button type="submit" class="btn btn-danger">Registrarme</button>
+</form>

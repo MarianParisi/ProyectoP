@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "NivelAvanzado";
+}
+@section Levels
+{
+    <link rel="stylesheet" href="~/Content/Levels.css">
+
+}
+
+<!-- Rutina seleccionada -->
+<div class="intro">
+    
+    <h3>Estas por comenzar tu rutina de entrenamiento en Nivel Avanzado</h3>
+    <p> Entrenaras lunes martes jueves y viernes.
+        Tu rutina consiste en completar 5 rondas de 5 ejercicios funcionales.
+        Podras elejir los ejercicios a continuacion, donde se indicaran las repeticiones correspondientes.
+        Al terminar las repeticiones indicadas puedes descansar 15 segundos y pasar al siguiente hasta completar todos los ejercicios de la ronda.
+        Descansaras por un minuto y comenzaras la siguiente ronda repitiendo el proceso hasta completar 5.<br />
+        <span>Importante:</span> en esta modalidad no se tiene en cuenta el tiempo que tardes en
+        realizar los ejercicios, sino que <span>el objetivo es completar las rondas</span>.
+    </p>
+    <p>
+        Cuando vayas ganando condicion fisica podras suprimir los descansos entre ejercicios y aumentar lar repeticiones.
+    </p>
+</div>
+
+@section scripts{
+    <script>
+    $("ul").append("<li><a href='@Url.Action("NivelIntermedio", "Home")'>Nivel anterior</a></li>")
+    </script>
+}
+

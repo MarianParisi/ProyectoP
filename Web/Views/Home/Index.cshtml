@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="jumbotron"> <!--intro col-sm-12 col-lg-12 col-md-12"-->
+            <div>
+                <h1 class="display-3">Nunca es demasiado tarde</h1>
+                <p class="lead">para...</p>
+
+            </div>
+            <div id="selection">
+                <button type="button" class="btn" id="begin">¡Entrenar!</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--lo siguiente esta oculto-->
+<div id="oculto">
+    <div class="intro">
+        <h1>¡Bienvenido a Do it Functional!</h1>
+        <h3>La aplicacion que te permitira armar tu propia rutina de <a href='@Url.Action("Funcional", "Home")'>ejercicios funcionales</a></h3>
+        <p>Para comenzar seleciona tu nivel </p>
+    </div>
+    <a class="btn" id="btn1"href='@Url.Action("NivelInicial", "Home")'>Primeros Pasos</a>
+    <a class="btn" id="btn2"href='@Url.Action("NivelIntermedio", "Home")'>Vamos por mas</a>
+    <a class="btn" id="btn3"href='@Url.Action("NivelAvanzado", "Home")'>Me siento fuerte</a>
+</div>
+
+@section scripts{
+    <script src="~/Scripts/main.js"></script>
+}

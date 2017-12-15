@@ -1,0 +1,45 @@
+﻿@using Web.Models
+@section Levels
+{
+    <link rel="stylesheet" href="~/Content/Levels.css">
+
+}
+@{
+    ViewBag.Title = "Rutina";
+}
+<div class="intro">
+
+    @*@foreach (Level level in @ViewBag.level)
+    {
+        <h1>Rutina Nivel: @level.Description</h1>
+
+        <h3>Dias de entrenamiento:@level.RoutineDays</h3>
+        <hr />
+        <h3>Numero de rondas:@level.Rounds </h3>
+        <hr />
+        <h3>Repeticiones:@level.ExerciseRepetition</h3>
+    }*@
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Ejercicios</th>
+                <th scope="col">Descripcion</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@ViewBag.ejerciciosRutina1.Name</td>
+                <td>@ViewBag.ejerciciosRutina1.Description</td>
+            </tr>
+            <tr>
+                <td>@ViewBag.ejerciciosRutina2.Name</td>
+                <td>@ViewBag.ejerciciosRutina2.Description</td>
+            </tr>
+            <tr>
+                <td>@ViewBag.ejerciciosRutina3.Name</td>
+                <td>@ViewBag.ejerciciosRutina3.Description</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
