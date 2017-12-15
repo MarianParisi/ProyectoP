@@ -40,10 +40,13 @@ namespace Web.Controllers
 		{
 			return View();
 		}
+
 		public ActionResult Rutina()
 		{
-			List<Level> levelList = db.Level.ToList();
-			ViewBag.level = levelList;
+			//List<Level> levelList = db.Level.ToList();
+			//ViewBag.level = levelList;
+			Level level = db.Level.FirstOrDefault(u => u.ID.Equals(6));
+			ViewBag.level = level;
 			return View();
 		}
 		public ActionResult Contacto()

@@ -158,6 +158,14 @@
     <Compile Include="Migrations\201712121441466_inicial.Designer.cs">
       <DependentUpon>201712121441466_inicial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712150256164_segunda.cs" />
+    <Compile Include="Migrations\201712150256164_segunda.Designer.cs">
+      <DependentUpon>201712150256164_segunda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712150304592_tercera.cs" />
+    <Compile Include="Migrations\201712150304592_tercera.Designer.cs">
+      <DependentUpon>201712150304592_tercera.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Exercise.cs" />
     <Compile Include="Models\ExerciseRoutine.cs" />
@@ -236,6 +244,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201712121441466_inicial.resx">
       <DependentUpon>201712121441466_inicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712150256164_segunda.resx">
+      <DependentUpon>201712150256164_segunda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712150304592_tercera.resx">
+      <DependentUpon>201712150304592_tercera.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
