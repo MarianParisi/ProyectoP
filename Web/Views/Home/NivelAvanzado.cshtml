@@ -1,4 +1,4 @@
-﻿
+﻿@using Web.Models
 @{
     ViewBag.Title = "NivelAvanzado";
 }
@@ -10,20 +10,72 @@
 
 <!-- Rutina seleccionada -->
 <div class="intro">
-    
-    <h3>Estas por comenzar tu rutina de entrenamiento en Nivel Avanzado</h3>
-    <p> Entrenaras lunes martes jueves y viernes.
-        Tu rutina consiste en completar 5 rondas de 5 ejercicios funcionales.
+    <h1>
+        Tu rutina consiste en completar 5 rondas de 5 <a href='@Url.Action("Funcional", "Home")'>ejercicios funcionales</a> los dias lunes miercoles y viernes.
+    </h1>
+    <p>
         Podras elejir los ejercicios a continuacion, donde se indicaran las repeticiones correspondientes.
         Al terminar las repeticiones indicadas puedes descansar 15 segundos y pasar al siguiente hasta completar todos los ejercicios de la ronda.
         Descansaras por un minuto y comenzaras la siguiente ronda repitiendo el proceso hasta completar 5.<br />
         <span>Importante:</span> en esta modalidad no se tiene en cuenta el tiempo que tardes en
         realizar los ejercicios, sino que <span>el objetivo es completar las rondas</span>.
     </p>
-    <p>
+    <h3>
         Cuando vayas ganando condicion fisica podras suprimir los descansos entre ejercicios y aumentar lar repeticiones.
-    </p>
+    </h3>
 </div>
+<!-- Eleccion de los ejercicios-->
+<div class="container" id="eleccion">
+    <div class="form-group">
+        <form action="@Url.Action("RutinaAvanzada","Home")" , method="post">
+            <div class="col-md-6 col-md-offset-3 col-sm-offset-3 col-sm-6">
+                <label class="col-form-label">Ejercicio 1</label>
+
+                <select class="form-control" name="Ejercicio1">
+                    @foreach (Exercise exercise in @ViewBag.Exercises)
+                    {
+                        <option value="@exercise.ID">@exercise.Name</option>}
+                </select>
+            </div>
+            <div class="col-md-6 col-md-offset-3 col-sm-offset-3 col-sm-6">
+                <label class="col-form-label">Ejercicio 2</label>
+                <select class="form-control" name="Ejercicio2">
+                    @foreach (Exercise exercise in @ViewBag.Exercises)
+                    {
+                        <option value="@exercise.ID">@exercise.Name</option>}
+                </select>
+            </div>
+            <div class="col-md-6 col-md-offset-3 col-sm-offset-3 col-sm-6">
+                <label class="col-form-label">Ejercicio 3</label>
+                <select class="form-control" name="Ejercicio3">
+                    @foreach (Exercise exercise in @ViewBag.Exercises)
+                    {
+                        <option value="@exercise.ID">@exercise.Name</option>}
+                </select>
+            </div>
+            <div class="col-md-6 col-md-offset-3 col-sm-offset-3 col-sm-6">
+                <label class="col-form-label">Ejercicio 4</label>
+                <select class="form-control" name="Ejercicio4">
+                    @foreach (Exercise exercise in @ViewBag.Exercises)
+                    {
+                        <option value="@exercise.ID">@exercise.Name</option>}
+                </select>
+            </div>
+            <div class="col-md-6 col-md-offset-3 col-sm-offset-3 col-sm-6">
+                <label class="col-form-label">Ejercicio 5</label>
+                <select class="form-control" name="Ejercicio5">
+                    @foreach (Exercise exercise in @ViewBag.Exercises)
+                    {
+                        <option value="@exercise.ID">@exercise.Name</option>}
+                </select>
+            </div>
+            <div class="col-md-6 col-md-offset-3 col-sm-offset-3 col-sm-6">
+                <button type="submit" class="btn btn-avanzado">Seleccionar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
 
 @section scripts{
     <script>

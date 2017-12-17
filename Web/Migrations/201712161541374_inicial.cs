@@ -40,10 +40,13 @@ namespace Web.Migrations
                     {
                         ID = c.Int(nullable: false, identity: true),
                         UserID = c.Int(nullable: false),
+                        Level_ID = c.Int(),
                     })
                 .PrimaryKey(t => t.ID)
+                .ForeignKey("dbo.Levels", t => t.Level_ID)
                 .ForeignKey("dbo.Users", t => t.UserID, cascadeDelete: true)
-                .Index(t => t.UserID);
+                .Index(t => t.UserID)
+                .Index(t => t.Level_ID);
             
             CreateTable(
                 "dbo.Levels",
@@ -53,12 +56,10 @@ namespace Web.Migrations
                         Description = c.String(nullable: false),
                         Rounds = c.Int(nullable: false),
                         ExerciseNumber = c.Int(nullable: false),
-                        RoutineDays = c.Int(nullable: false),
+                        RoutineDays = c.String(),
                         ExerciseRepetition = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.ID)
-                .ForeignKey("dbo.Routines", t => t.ID)
-                .Index(t => t.ID);
+                .PrimaryKey(t => t.ID);
             
             CreateTable(
                 "dbo.Users",
@@ -68,6 +69,7 @@ namespace Web.Migrations
                         Name = c.String(nullable: false),
                         Surname = c.String(),
                         Email = c.String(),
+                        Password = c.String(),
                     })
                 .PrimaryKey(t => t.ID);
             
@@ -86,10 +88,10 @@ namespace Web.Migrations
         {
             DropForeignKey("dbo.Exercises", "ExerciseTypeID", "dbo.ExerciseTypes");
             DropForeignKey("dbo.Routines", "UserID", "dbo.Users");
-            DropForeignKey("dbo.Levels", "ID", "dbo.Routines");
+            DropForeignKey("dbo.Routines", "Level_ID", "dbo.Levels");
             DropForeignKey("dbo.ExerciseRoutines", "RoutineID", "dbo.Routines");
             DropForeignKey("dbo.ExerciseRoutines", "ExerciseID", "dbo.Exercises");
-            DropIndex("dbo.Levels", new[] { "ID" });
+            DropIndex("dbo.Routines", new[] { "Level_ID" });
             DropIndex("dbo.Routines", new[] { "UserID" });
             DropIndex("dbo.ExerciseRoutines", new[] { "ExerciseID" });
             DropIndex("dbo.ExerciseRoutines", new[] { "RoutineID" });

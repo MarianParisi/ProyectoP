@@ -8,7 +8,7 @@
 }
 <div class="container">
     <div class="row">
-        <div class="jumbotron"> <!--intro col-sm-12 col-lg-12 col-md-12"-->
+        <div class="jumbotron">
             <div>
                 <h1 class="display-3">Nunca es demasiado tarde</h1>
                 <p class="lead">para...</p>
@@ -24,14 +24,15 @@
 <div id="oculto">
     <div class="intro">
         <h1>¡Bienvenido a Do it Functional!</h1>
-        <h3>La aplicacion que te permitira armar tu propia rutina de <a href='@Url.Action("Funcional", "Home")'>ejercicios funcionales</a></h3>
-        <p>Para comenzar seleciona tu nivel </p>
+        <h3>La aplicacion que te permitira armar tu propia rutina de <a id="funcional" href='@Url.Action("Funcional", "Home")'>ejercicios funcionales</a></h3>
+        <h3>Para comenzar </h3>
+        <a class="btn btn-inicial"href='@Url.Action("Login", "Users")'>Inicia sesion</a> o <a class="btn btn-avanzado"href='@Url.Action("Registro", "Users")'>Registrate</a>
     </div>
-    <a class="btn" id="btn1"href='@Url.Action("NivelInicial", "Home")'>Primeros Pasos</a>
-    <a class="btn" id="btn2"href='@Url.Action("NivelIntermedio", "Home")'>Vamos por mas</a>
-    <a class="btn" id="btn3"href='@Url.Action("NivelAvanzado", "Home")'>Me siento fuerte</a>
 </div>
 
-@section scripts{
+
+
+@section scripts
+{
     <script src="~/Scripts/main.js"></script>
 }

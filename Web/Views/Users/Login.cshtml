@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+@section Levels
+{
+    <link rel="stylesheet" href="~/Content/Levels.css">
+
+}
+
+
+<form class="form-group" action="@Url.Action("DoLogin","Users")" , method="post">
+    <div class="col-md-6 col-md-offset-3 col-sm-offset-3 col-sm-6">
+        <label class="col-form-label" for="formGroupExampleInput" required>Ingrese su nombre</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" name="name" required>
+    </div>
+
+    <div class="col-md-6 col-md-offset-3 col-sm-offset-3 col-sm-6">
+        <label for="exampleFormControlInput1" required>Ingrese su correo electronico</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email"  required>
+    </div>
+
+    <div class="col-md-6 col-md-offset-3 col-sm-offset-3 col-sm-6">
+        <label for="exampleFormControlInput1"required>Ingrese su contraseña </label>
+        <input type="password" class="form-control" id="exampleFormControlInput1"  name="password"  required>
+    </div>
+    <div class="col-md-6 col-md-offset-3 col-sm-offset-3 col-sm-6">
+        <button type="submit" class="btn btn-danger">Iniciar sesion</button>
+    </div>
+</form>

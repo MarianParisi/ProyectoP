@@ -15,7 +15,7 @@
 <div class="intro">
     <h1>
         Tu rutina consiste en completar 3 rondas de 3 <a href='@Url.Action("Funcional", "Home")'>ejercicios funcionales</a> los dias lunes miercoles y viernes.
-</h1>
+    </h1>
     <p>
         Podras elejir los ejercicios a continuacion, donde se indicaran las repeticiones correspondientes.
         Al terminar las repeticiones indicadas puedes descansar 15 segundos y pasar al siguiente hasta completar todos los ejercicios de la ronda.
@@ -24,50 +24,43 @@
         realizar los ejercicios, sino que <span>el objetivo es completar las rondas</span>.
     </p>
     <h3>
-      
         Cuando vayas ganando condicion fisica podras suprimir los descansos entre ejercicios y aumentar las repeticiones.
     </h3>
 </div>
 
 <!-- Eleccion de los ejercicios-->
-
 <div class="container" id="eleccion">
-  
-        <div class="form-group">
-    <form action="@Url.Action("Rutina","Home")" , method="post">
-        <div class="col-md-6 col-md-offset-3">
-            <label class="col-form-label">Ejercicio 1</label>
-
-            <select class="form-control" name="Ejercicio1">
-                @foreach (Exercise exercise in @ViewBag.Exercises)
-                {
-                    <option value="@exercise.ID">@exercise.Name</option>}
-            </select>
-        </div>
-        <div class="col-md-6 col-md-offset-3">
-            <label class="col-form-label">Ejercicio 2</label>
-            <select class="form-control" name="Ejercicio2">
-                @foreach (Exercise exercise in @ViewBag.Exercises)
-                {
-                    <option value="@exercise.ID">@exercise.Name</option>}
-            </select>
-        </div>
-        <div class="col-md-6 col-md-offset-3">
-            <label class="col-form-label">Ejercicio 3</label>
-            <select class="form-control" name="Ejercicio3">
-                @foreach (Exercise exercise in @ViewBag.Exercises)
-                {
-                    <option value="@exercise.ID">@exercise.Name</option>}
-            </select>
-        </div>
-        <div class="col-md-6 col-md-offset-3">
-            <button type="submit" class="btn btn-inicial">Seleccionar</button>
+    <div class="form-group">
+        <form action="@Url.Action("Rutina","Home")" , method="post">
+            <div class="col-md-6 col-md-offset-3 col-sm-offset-3 col-sm-6">
+                <label class="col-form-label">Ejercicio 1</label>
+                <select class="form-control" name="Ejercicio1">
+                    @foreach (Exercise exercise in @ViewBag.Exercises)
+                    {
+                        <option value="@exercise.ID">@exercise.Name</option>}
+                </select>
             </div>
-
-
-</form>
+            <div class="col-md-6 col-md-offset-3 col-sm-offset-3 col-sm-6">
+                <label class="col-form-label">Ejercicio 2</label>
+                <select class="form-control" name="Ejercicio2">
+                    @foreach (Exercise exercise in @ViewBag.Exercises)
+                    {
+                        <option value="@exercise.ID">@exercise.Name</option>}
+                </select>
+            </div>
+            <div class="col-md-6 col-md-offset-3 col-sm-offset-3 col-sm-6">
+                <label class="col-form-label">Ejercicio 3</label>
+                <select class="form-control" name="Ejercicio3">
+                    @foreach (Exercise exercise in @ViewBag.Exercises)
+                    {
+                        <option value="@exercise.ID">@exercise.Name</option>}
+                </select>
+            </div>
+            <div class="col-md-6 col-md-offset-3 col-sm-offset-3 col-sm-6">
+                <button type="submit" class="btn btn-inicial">Seleccionar</button>
+            </div>
+        </form>
     </div>
-
 </div>
 
 

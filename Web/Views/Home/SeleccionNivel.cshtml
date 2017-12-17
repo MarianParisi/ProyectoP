@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "SeleccionNivel";
+}
+@section Levels
+{
+    <link rel="stylesheet" href="~/Content/Levels.css">
+
+}
+<div class="intro">
+    <a class="btn btn-inicial" href='@Url.Action("NivelInicial", "Home")'>Primeros Pasos</a>
+    <a class="btn btn-intermedio" href='@Url.Action("NivelIntermedio", "Home")'>Vamos por mas</a>
+    <a class="btn btn-avanzado" href='@Url.Action("NivelAvanzado", "Home")'>Me siento fuerte</a>
+</div>

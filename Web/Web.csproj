@@ -149,27 +149,15 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="DAL\ExercisesController.cs" />
     <Compile Include="DAL\TrainingContext.cs" />
+    <Compile Include="DAL\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201712121441466_inicial.cs" />
-    <Compile Include="Migrations\201712121441466_inicial.Designer.cs">
-      <DependentUpon>201712121441466_inicial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712150256164_segunda.cs" />
-    <Compile Include="Migrations\201712150256164_segunda.Designer.cs">
-      <DependentUpon>201712150256164_segunda.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712150304592_tercera.cs" />
-    <Compile Include="Migrations\201712150304592_tercera.Designer.cs">
-      <DependentUpon>201712150304592_tercera.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712151402552_cuarta.cs" />
-    <Compile Include="Migrations\201712151402552_cuarta.Designer.cs">
-      <DependentUpon>201712151402552_cuarta.cs</DependentUpon>
+    <Compile Include="Migrations\201712161541374_inicial.cs" />
+    <Compile Include="Migrations\201712161541374_inicial.Designer.cs">
+      <DependentUpon>201712161541374_inicial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Exercise.cs" />
@@ -206,7 +194,9 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -229,7 +219,16 @@
     <Content Include="Views\Exercises\Index.cshtml" />
     <Content Include="Views\Home\Funcional.cshtml" />
     <Content Include="Views\Home\Rutina.cshtml" />
-    <Content Include="Views\User\Registro.cshtml" />
+    <Content Include="Views\Home\RutinaIntermedia.cshtml" />
+    <Content Include="Views\Home\RutinaAvanzada.cshtml" />
+    <Content Include="Views\Users\Create.cshtml" />
+    <Content Include="Views\Users\Delete.cshtml" />
+    <Content Include="Views\Users\Details.cshtml" />
+    <Content Include="Views\Users\Edit.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\Users\Login.cshtml" />
+    <Content Include="Views\Users\Registro.cshtml" />
+    <Content Include="Views\Home\SeleccionNivel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -248,17 +247,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201712121441466_inicial.resx">
-      <DependentUpon>201712121441466_inicial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712150256164_segunda.resx">
-      <DependentUpon>201712150256164_segunda.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712150304592_tercera.resx">
-      <DependentUpon>201712150304592_tercera.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712151402552_cuarta.resx">
-      <DependentUpon>201712151402552_cuarta.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712161541374_inicial.resx">
+      <DependentUpon>201712161541374_inicial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -24,9 +24,8 @@
 	color: #331621;
 	background-color: rgba(255,239,213,0.7);
 }
-.intro a {
-		text-decoration: none;
-		color: #C70039;
+ a {
+	text-decoration: none;
 }
 .intro p{
 	font-weight:bold;
@@ -55,12 +54,24 @@
 	display: none;
 	margin-top: 11%;
 	}
-#btn1 {
+.btn-inicial {
 	background-color: #FFA07A;
 }
-#btn2 {
+.inicial:hover {
+	color: #FFA07A;
+}
+.btn-intermedio {
 	background-color: #C70039;
 }
-#btn3 {
+.intermedio:hover {
+	color: #C70039;
+}
+.btn-avanzado {
 	background-color: #581845;
-}  
+}
+.avanzado:hover {
+	color: #581845;
+}
+#funcional {
+	color: #C70039;
+}
