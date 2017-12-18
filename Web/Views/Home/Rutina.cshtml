@@ -12,6 +12,7 @@
         <h1>Usuario: @ViewBag.userName</h1>
     <hr />
         <h2>Rutina Nivel: @ViewBag.level.Description</h2>
+
         <h3>Dias de entrenamiento: @ViewBag.level.RoutineDays</h3>
         
         <h3>Numero de rondas: @ViewBag.level.Rounds </h3>
@@ -31,11 +32,11 @@
         <tbody>
             <tr>
                 <td>@ViewBag.ejerciciosRutina1.Name</td>
-                <td>@ViewBag.ejerciciosRutina1.Description</td>
+                @*<td>@Html.ActionLink("Detalles", "Rutina", "Home", (string) ViewBag.ej1D )</td>*@
             </tr>
             <tr>
                 <td>@ViewBag.ejerciciosRutina2.Name</td>
-                <td>@ViewBag.ejerciciosRutina2.Description</td>
+                <td><a href="@ViewBag.ej2D"></a></td>
             </tr>
             <tr>
                 <td>@ViewBag.ejerciciosRutina3.Name</td>

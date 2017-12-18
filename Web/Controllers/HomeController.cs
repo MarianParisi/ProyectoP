@@ -134,9 +134,15 @@ namespace Web.Controllers
 			ViewBag.ejerciciosRutina2 = ejerciciosSeleccionados2;
 			ViewBag.ejerciciosRutina3 = ejerciciosSeleccionados3;
 
+			ViewBag.ej1D = ejerciciosSeleccionados1.Description;
+			ViewBag.ej2D = ejerciciosSeleccionados2.Description;
+			ViewBag.ej3D = ejerciciosSeleccionados3.Description;
+
 			Level level = db.Level.FirstOrDefault(u => u.Description.Equals("Inicial"));
 			ViewBag.level = level;
+
 			
+
 			return View();
 		}
 		[HttpPost]
