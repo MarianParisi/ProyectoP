@@ -57,8 +57,7 @@ namespace Web.Controllers
 		}
 		public ActionResult Rutina()
 		{
-			User user = (User) Session["LoggedUser"];
-			ViewBag.userName = user.Name;
+			
 			return View();
 		}
 		public ActionResult RutinaIntermedia()
@@ -141,7 +140,9 @@ namespace Web.Controllers
 			Level level = db.Level.FirstOrDefault(u => u.Description.Equals("Inicial"));
 			ViewBag.level = level;
 
-			
+			User user = (User)Session["LoggedUser"];
+			ViewBag.userName = user.Name;
+
 
 			return View();
 		}
