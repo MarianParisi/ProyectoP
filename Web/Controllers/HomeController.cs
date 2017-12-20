@@ -22,9 +22,8 @@ namespace Web.Controllers
 
 		public ActionResult NivelInicial()
 		{
-		    List<Exercise> exerciseList = db.Exercise.ToList();
-		    ViewBag.Exercises = exerciseList;
-			
+			List<Exercise> exerciseList = db.Exercise.ToList();
+			ViewBag.Exercises = exerciseList;
 			return View();
 		}
 
@@ -57,19 +56,14 @@ namespace Web.Controllers
 		}
 		public ActionResult Rutina()
 		{
-			
 			return View();
 		}
 		public ActionResult RutinaIntermedia()
 		{
-			User user = (User)Session["LoggedUser"];
-			ViewBag.userName = user.Name;
 			return View();
 		}
 		public ActionResult RutinaAvanzada()
 		{
-			User user = (User)Session["LoggedUser"];
-			ViewBag.userName = user.Name;
 			return View();
 		}
 		[HttpPost]
@@ -161,9 +155,16 @@ namespace Web.Controllers
 			ViewBag.ejerciciosRutina3 = ejerciciosSeleccionados3;
 			ViewBag.ejerciciosRutina4 = ejerciciosSeleccionados4;
 
-			
+			ViewBag.ej1D = ejerciciosSeleccionados1.Description;
+			ViewBag.ej2D = ejerciciosSeleccionados2.Description;
+			ViewBag.ej3D = ejerciciosSeleccionados3.Description;
+			ViewBag.ej4D = ejerciciosSeleccionados4.Description;
+
 			Level level = db.Level.FirstOrDefault(u => u.Description.Equals("Intermedio"));
 			ViewBag.level = level;
+
+			User user = (User)Session["LoggedUser"];
+			ViewBag.userName = user.Name;
 
 			return View();
 		}
@@ -184,9 +185,17 @@ namespace Web.Controllers
 			ViewBag.ejerciciosRutina4 = ejerciciosSeleccionados4;
 			ViewBag.ejerciciosRutina5 = ejerciciosSeleccionados5;
 
+			ViewBag.ej1D = ejerciciosSeleccionados1.Description;
+			ViewBag.ej2D = ejerciciosSeleccionados2.Description;
+			ViewBag.ej3D = ejerciciosSeleccionados3.Description;
+			ViewBag.ej4D = ejerciciosSeleccionados4.Description;
+			ViewBag.ej5D = ejerciciosSeleccionados5.Description;
+
 			Level level = db.Level.FirstOrDefault(u => u.Description.Equals("Avanzado"));
 			ViewBag.level = level;
 
+			User user = (User)Session["LoggedUser"];
+			ViewBag.userName = user.Name;
 			return View();
 		}
 	}

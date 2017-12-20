@@ -19,8 +19,6 @@
 	}
 .intro {
 	padding: 30px 60px;
-	/*margin-top: 20px;
-	margin-bottom: 10px;*/
 	color: #331621;
 	background-color: rgba(255,239,213,0.7);
 }
@@ -43,7 +41,6 @@
 	background-color: #331621;
 }
 #begin {
-	
 	opacity: 1;
 	background-color: #DC143C;
 }
@@ -57,21 +54,27 @@
 .btn-inicial {
 	background-color: #FFA07A;
 }
-.inicial:hover {
-	color: #FFA07A;
-}
+
 .btn-intermedio {
 	background-color: #C70039;
 }
-.intermedio:hover {
-	color: #C70039;
-}
+
 .btn-avanzado {
 	background-color: #581845;
 }
-.avanzado:hover {
-	color: #581845;
-}
-#funcional {
+#funcional:hover {
 	color: #C70039;
+}
+.logo {
+	background-image: url('/Content/Images/DF.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	display: block;
+	width: 130px;
+	height: 50px;
+	padding: 0;
+}
+#nombreApp{
+	font-style:italic;
 }

@@ -17,16 +17,11 @@
 	font-weight:bold;
 }
 label {
-	
 	color: #ffffff;
 	padding:5px;
 	margin:0 auto;
+	font-size:16px;
 }
-/*.form-control{
-	width:50%;
-	
-	
-}*/
 span{
 	font-weight:bold;
 }
@@ -39,7 +34,6 @@ a {
 }
 a:active {
 		color: white;
-
 }
 .inicial:hover {
 	color: #FFA07A;
@@ -64,4 +58,19 @@ th{
 }
 .table {
 	background-color: rgba(255,239,213,0.5);
+}
+.seleccion{
+	margin-top:5%;
+}
+form {
+	margin-top: 5%;
+}
+.form-control {
+	background-color: rgba(255,239,213,0.7);
+}
+.ejercicioTabla{
+	font-size:16px;
+}
+.table thead {
+	font-size: 16px;
 }

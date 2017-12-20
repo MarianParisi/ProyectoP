@@ -12,7 +12,6 @@
             <div>
                 <h1 class="display-3">Nunca es demasiado tarde</h1>
                 <p class="lead">para...</p>
-
             </div>
             <div id="selection">
                 <button type="button" class="btn" id="begin">¡Entrenar!</button>
@@ -23,11 +22,11 @@
 <!--lo siguiente esta oculto-->
 <div id="oculto">
     <div class="intro">
-        <h1>¡Bienvenido a Do it Functional!</h1>
+        <h1>¡Bienvenido a <span id="nombreApp">Do it Functional</span> !</h1>
         <h3>La aplicacion que te permitira armar tu propia rutina de <a id="funcional" href='@Url.Action("Funcional", "Home")'>ejercicios funcionales</a></h3>
         <br />
         <h3>Para comenzar </h3>
-        <a class="btn btn-inicial"href='@Url.Action("Login", "Users")'>Inicia sesion</a> o <a class="btn btn-avanzado"href='@Url.Action("Registro", "Users")'>Registrate</a>
+        <a class="btn btn-inicial"href='@Url.Action("Login", "Users")'>Inicia sesion</a>  <a class="btn btn-avanzado"href='@Url.Action("Registro", "Users")'>Registrate</a>
     </div>
 </div>
 
@@ -35,5 +34,12 @@
 
 @section scripts
 {
-    <script src="~/Scripts/main.js"></script>
+    <script>
+        $("#begin").on("click", function () {
+
+            $(".jumbotron").fadeOut(1000, function () {
+                $("#oculto").fadeIn()
+            })
+        })
+            </script>
 }
