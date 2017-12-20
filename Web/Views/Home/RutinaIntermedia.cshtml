@@ -14,15 +14,12 @@
     <h1>Usuario: @ViewBag.userName</h1>
     <hr />
     <h2>Rutina Nivel: @ViewBag.level.Description</h2>
+
     <h3>Dias de entrenamiento: @ViewBag.level.RoutineDays</h3>
 
     <h3>Numero de rondas: @ViewBag.level.Rounds </h3>
 
     <h3>Repeticiones: @ViewBag.level.ExerciseRepetition</h3>
-
-
-
-
 
     <table class="table">
         <thead>
@@ -33,22 +30,22 @@
         </thead>
         <tbody>
             <tr>
-                <td>@ViewBag.ejerciciosRutina1.Name</td>
-                <td>@ViewBag.ejerciciosRutina1.Description</td>
+                <td class="ejercicioTabla">@ViewBag.ejerciciosRutina1.Name</td>
+                <td><iframe width="360" height="215" src="https://www.youtube.com/embed/@ViewBag.ej1D" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></td>
             </tr>
             <tr>
-                <td>@ViewBag.ejerciciosRutina2.Name</td>
-                <td>@ViewBag.ejerciciosRutina2.Description</td>
+                <td class="ejercicioTabla">@ViewBag.ejerciciosRutina2.Name</td>
+                <td><iframe width="360" height="215" src="https://www.youtube.com/embed/@ViewBag.ej2D" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></td>
             </tr>
             <tr>
-                <td>@ViewBag.ejerciciosRutina3.Name</td>
-                <td>@ViewBag.ejerciciosRutina3.Description</td>
+                <td class="ejercicioTabla">@ViewBag.ejerciciosRutina3.Name</td>
+                <td><iframe width="360" height="215" src="https://www.youtube.com/embed/@ViewBag.ej3D" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></td>
             </tr>
             <tr>
-                <td>@ViewBag.ejerciciosRutina4.Name</td>
-                <td>@ViewBag.ejerciciosRutina4.Description</td>
+                <td class="ejercicioTabla">@ViewBag.ejerciciosRutina4.Name</td>
+                <td><iframe width="360" height="215" src="https://www.youtube.com/embed/@ViewBag.ej4D" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></td>
             </tr>
-        </tbody>
+         </tbody>
     </table>
 </div>
 

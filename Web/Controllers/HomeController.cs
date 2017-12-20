@@ -136,8 +136,7 @@ namespace Web.Controllers
 
 			User user = (User)Session["LoggedUser"];
 			ViewBag.userName = user.Name;
-
-
+			
 			return View();
 		}
 		[HttpPost]
@@ -196,6 +195,7 @@ namespace Web.Controllers
 
 			User user = (User)Session["LoggedUser"];
 			ViewBag.userName = user.Name;
+
 			return View();
 		}
 	}
