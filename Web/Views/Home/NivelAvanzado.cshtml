@@ -30,7 +30,6 @@
         <form action="@Url.Action("RutinaAvanzada","Home")" , method="post">
             <div class="col-md-6 col-md-offset-3 col-sm-offset-3 col-sm-6">
                 <label class="col-form-label">Ejercicio 1</label>
-
                 <select class="form-control" name="Ejercicio1">
                     @foreach (Exercise exercise in @ViewBag.Exercises)
                     {
@@ -75,7 +74,6 @@
         </form>
     </div>
 </div>
-
 
 @section scripts{
     <script>

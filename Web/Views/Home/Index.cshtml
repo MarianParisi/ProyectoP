@@ -21,15 +21,13 @@
 </div>
 <!--lo siguiente esta oculto-->
 <div id="oculto">
-    <div class="intro">
-        <h1>¡Bienvenido a <span id="nombreApp">Do it Functional</span> !</h1>
+    <div class="intro1">
+        <h1>Bienvenido a </h1>
+        <div id="fondoLogo"><img id="nombreApp" src="~/Content/Images/Logo.png" /></div>
         <h3>La aplicacion que te permitira armar tu propia rutina de <a id="funcional" href='@Url.Action("Funcional", "Home")'>ejercicios funcionales</a></h3>
-        <br />
-        
-        <a class="btn btn-inicial"href='@Url.Action("Login", "Users")'>Inicia sesion</a>  <a class="btn btn-avanzado"href='@Url.Action("Registro", "Users")'>Registrate</a>
+        <a class="btn btn-inicial" href='@Url.Action("Login", "Users")'>Inicia sesion</a>  <a class="btn btn-avanzado" href='@Url.Action("Registro", "Users")'>Registrate</a>
     </div>
 </div>
-
 
 
 @section scripts
@@ -41,5 +39,5 @@
                 $("#oculto").fadeIn()
             })
         })
-            </script>
+    </script>
 }

@@ -9,10 +9,9 @@
 
 }
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
     <div class="form-horizontal">
         <h2>Agregar Ejercicio</h2>
         <hr />
@@ -22,15 +21,15 @@
                 @Html.LabelFor(model => model.ExerciseTypeID, "Tipo de ejercicio", htmlAttributes: new { @class = "control-label col-form-label" })
                 @Html.DropDownList("ExerciseTypeID", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.ExerciseTypeID, "", new { @class = "text-danger" })
-           
+
                 @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label  col-form-label" })
                 @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
-           
+
                 @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-form-label" })
                 @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
-                
+
                 <input type="submit" value="Create" class="btn btn-avanzado" />
             </div>
         </div>

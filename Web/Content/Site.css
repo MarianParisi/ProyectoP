@@ -3,22 +3,24 @@
     background-image: url('/Content/Images/fondo.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 .container{
 	padding:0;
 	max-width:none;
-	
 }
 .jumbotron {
-
 	background-color: rgba(255,239,213,0.7);
 	border:none;
 	border-radius:0;
-    margin-top: 30px; 
+    margin: 5% auto; 
 	}
 .intro {
 	padding: 30px 60px;
+	color: #331621;
+	background-color: rgba(255,239,213,0.7);
+}
+.intro1{
+	padding: 15px 0;
 	color: #331621;
 	background-color: rgba(255,239,213,0.7);
 }
@@ -27,6 +29,7 @@
 }
 .intro p{
 	font-weight:bold;
+	line-height:30px;
 }
 
 .btn {
@@ -49,16 +52,14 @@
 }
 #oculto {
 	display: none;
-	margin-top: 11%;
+	margin: 5% auto;
 	}
 .btn-inicial {
 	background-color: #FFA07A;
 }
-
 .btn-intermedio {
 	background-color: #C70039;
 }
-
 .btn-avanzado {
 	background-color: #581845;
 }
@@ -66,7 +67,7 @@
 	color: #C70039;
 }
 .logo {
-	background-image: url('/Content/Images/DF.png');
+	background-image: url('/Content/Images/Logo.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -75,6 +76,14 @@
 	height: 50px;
 	padding: 0;
 }
-#nombreApp{
-	font-style:italic;
+#nombreApp {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 160px;
+	height: 90px;
+	margin:10px;
+}
+#fondoLogo {
+	background-color:black;
 }

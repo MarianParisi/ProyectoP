@@ -173,6 +173,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\DF.png" />
     <Content Include="Content\Images\fondo.jpeg" />
+    <Content Include="Content\Images\Logo.png" />
     <Content Include="Content\Levels.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />

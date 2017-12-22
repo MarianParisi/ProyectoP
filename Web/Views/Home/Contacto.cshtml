@@ -9,25 +9,20 @@
 
 <h3>@ViewBag.Message</h3>
 
-
-    <form class="form-group" action="@Url.Action("RecibirContacto","Home")" , method="post">
-        
-
-            <div class="col-md-6 col-md-offset-3 col-sm-offset-3 col-sm-6">
-                <label class="col-form-label" for="formGroupExampleInput" type="text" name="nombre" required>Ingrese su nombre</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="John Doe" required>
-            </div>
-       
-        <div class="col-md-6 col-md-offset-3 col-sm-offset-3 col-sm-6">
-            <label for="exampleFormControlInput1"  type="email" name="email" required >Ingrese su correo electronico</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
-        </div>
-
-        <div class="col-md-6 col-md-offset-3 col-sm-offset-3 col-sm-6">
-            <label for="exampleFormControlTextarea1">Mensaje</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="mensaje" required></textarea>
-        </div>
-        <div class="col-md-6 col-md-offset-3 col-sm-offset-3 col-sm-6">
-            <button type="submit" class="btn btn-avanzado">Enviar</button>
-        </div>
-    </form>
+<form class="form-group" action="@Url.Action("RecibirContacto","Home")" , method="post">
+    <div class="col-md-6 col-md-offset-3 col-sm-offset-3 col-sm-6">
+        <label class="col-form-label" for="formGroupExampleInput" type="text" name="nombre" required>Ingrese su nombre</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="John Doe" required>
+    </div>
+    <div class="col-md-6 col-md-offset-3 col-sm-offset-3 col-sm-6">
+        <label for="exampleFormControlInput1" type="email" name="email" required>Ingrese su correo electronico</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
+    </div>
+    <div class="col-md-6 col-md-offset-3 col-sm-offset-3 col-sm-6">
+        <label for="exampleFormControlTextarea1">Mensaje</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="mensaje" required></textarea>
+    </div>
+    <div class="col-md-6 col-md-offset-3 col-sm-offset-3 col-sm-6">
+        <button type="submit" class="btn btn-avanzado">Enviar</button>
+    </div>
+</form>
